@@ -15,6 +15,8 @@ class MainActivity : AppCompatActivity() {
         useMap();
 
         ergodicMap();
+
+//        useSingleFunction();
     }
 
     fun useSet() {
@@ -87,6 +89,11 @@ class MainActivity : AppCompatActivity() {
         //用Lambda表达式遍历Map
        map.forEach({ Log.v(TAG,"${it.key} -> ${it.value}")})
 
-
     }
+    //使用单表达式函数
+//    fun useSingleFunction(){
+//        Log.v(TAG,"${area(2.0,5.0)}")
+//    }
+//
+//    fun area(x:Double,y:Double):Double = x*y
 }
