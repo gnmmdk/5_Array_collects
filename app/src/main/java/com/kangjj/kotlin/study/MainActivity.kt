@@ -70,12 +70,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun ergodicMap() {
+        Log.v(TAG,"*********************************************************");
         val map = mapOf("Java" to 86, "Kotlin" to 76, "Go" to 92)
         for (en in map.entries) {//遍历Map的key-value对，entris元素返回key-value对组成的Set
             Log.v(TAG,"${en.key} -> ${en.value}");
         }
-        for (key in map.keys) {
+        Log.v(TAG,"*********************************************************");
+        for (key in map.keys) { //先遍历Map的key，再通过key获取value
             Log.v(TAG,"${key} -> ${map[key]}")
         }
+        Log.v(TAG,"*********************************************************");
+        for((key,value) in map){//直接用for-in循环遍历Map
+            Log.v(TAG,"${key} -> ${value}")
+        }
+        Log.v(TAG,"*********************************************************");
+        //用Lambda表达式遍历Map
+       map.forEach({ Log.v(TAG,"${it.key} -> ${it.value}")})
+
+
     }
 }
